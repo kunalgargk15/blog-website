@@ -1,0 +1,14 @@
+<%- include("partials/header"); -%> 
+
+<h1>Home</h1>
+<p> <%= startingContent %> </p>
+
+<!-- New method for using for-loop -->
+<% posts.forEach(function(post) { %>
+
+   <h2> <%= post.title %> </h2>
+   <p> <%= post.content.substring(0,100) + "..." %> <a href="/posts/<%= post.title %>">read more</a> </p>
+
+<% }); %>  
+
+<%- include("partials/footer"); -%> 
